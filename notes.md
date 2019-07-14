@@ -29,6 +29,15 @@
         ...
 
         pytest -v -m run_these_access
+
+        # 同时存在mark1和mark2标记的用例
+        pytest -v -m "mark1 and mark2"
+
+        # 包含mark1，不包含mark2
+        pytest -v -m "mark1 and not mark2"
+
+        # 包含mark1，或者包含mark2
+        pytest -v -m "mark1 or mark2"
         ```
     * -x    错误异常后退出
     * --maxfail=num    指定失败次数后，停止运行
